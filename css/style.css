@@ -9,18 +9,18 @@ html, body, input {
     padding: 10px;
    }
    
-   form {
+   .fields {
     margin: 15px 0;
    }
    
-   form input[type='text'] {
+   input[type='text'] {
     border: 2px solid #eb5424;
     border-radius: 5px;
     padding: 5px;
     width: 75%;
    }
    
-   form input[type='submit'] {
+   input[type='button'] {
     background: #eb5424;
     border: none;
     border-radius: 5px;

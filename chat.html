@@ -8,26 +8,31 @@
 
 <body>
     <div id="history"></div>
-    <form id="chat">
-        <input type="text" id="msg_text" name="msg_text" disabled/>
-        <input id="send" type="submit" value="Send!" />
-    </form>
+    <div class="fields">
+
+        <input type="text" id="msg_text" name="msg_text" disabled />
+        <input id="send" type="button" value="Send!"  onclick="Submit(event);"/>
+    </div>
+
 </body>
 
 <script src="/js/clientSocket.js"></script>
 <script>
-submitButton.addEventListener('submit',Submit);
+    var submitButton = document.getElementById('send');
+
+    submitButton.addEventListener('onclick', Submit);
 
 
-function Submit(e){
-    e.preventDefault();
-    console.log('disabled');
-    submitButton.setAttribute('disabled', true);
-    clickSubmit = true;
-    sendMessage(e);
-    console.log('enabled');
-    submitButton.removeAttribute('disabled');
-}
+
+    function Submit(e) {
+        e.preventDefault();
+        console.log('disabled');
+        submitButton.setAttribute('disabled', true);
+        clickSubmit = true;
+        sendMessage(e);
+        console.log('enabled');
+        submitButton.removeAttribute('disabled');
+    }
 </script>
 
 </html>
